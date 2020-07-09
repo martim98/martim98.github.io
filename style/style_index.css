@@ -1,0 +1,257 @@
+* {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #f2f2f2;
+}
+
+.top-bar {
+  height: 20px;
+  margin: auto;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  background:  #0047b3;
+}
+
+.top-bar h4 {
+  margin-top: -2px;
+  margin-left: 10px;
+  color: white;
+  text-shadow: 5px;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: black;
+}
+
+.navbar {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar li {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+}
+
+.navbar nav {
+  margin-top: auto;
+  margin-left: auto;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 100x;
+  background: white;
+  height: 20%;
+  border: 2px solid black;
+  border-bottom-left-radius:  5px;
+  border-bottom-right-radius:  5px;
+}
+
+.navbar a{
+  font-size: 20px;
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+
+}
+
+a:hover {
+  color: #0047b3;
+
+}
+
+.title {
+  margin-top: -20px;
+  display: inline-block;
+  width: 100%;
+}
+
+#legend {
+  margin-top: -10px;
+  margin-bottom: 5px;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+
+}
+
+
+.main a{
+  color: black;
+  text-decoration: underline;
+
+}
+
+
+h1 {
+  padding-left: 130px;
+  text-align: center;
+}
+
+.main {
+  float: left;
+  background: white;
+  width: 60%;
+  padding-left: 20px;
+  padding-right: 60px;
+  border: 2px dashed black;
+  border-radius: 3px;
+}
+
+.main.curriculum {
+  background: white;
+  border: 0px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 2px solid red;
+}
+
+.main ul {
+  background
+}
+
+.main h2 {
+  padding-left: 20px;
+}
+
+.main-li {
+  font-weight: 900;
+}
+
+.main li {
+  padding-bottom: 10px;
+}
+
+.side {
+  float: right;
+  width: 30%;
+  background: white;
+  border: 2px dashed black;
+  border-radius: 3px;
+  padding-right: 5px;
+}
+
+.side h2{
+  padding-left: 40px;
+}
+
+.side li {
+  padding-bottom: 5px;
+}
+
+
+
+.three-columns.first{
+  display: inline-block;
+  float: left;
+  width: 33%;
+}
+
+.three-columns.second{
+  display: inline-block;
+  float: left;
+  width: 33%;
+}
+
+.three-columns.third{
+  display: inline-block;
+  float: left;
+  width: 33%;
+}
+
+
+
+
+.clr {
+  clear: left;
+}
+
+.btn {
+  display: inline;
+  float: right;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: #cce6ff;;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.btn a{
+  text-decoration: underline;
+  color: black;
+  font-weight: 900;
+}
+
+.btn a:hover {
+  color: #0047b3;
+}
+
+.contacts li{
+  color: black;
+  font-weight: 500;
+}
+
+.contacts a{
+  color: black;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+img {
+  display: inline-block;
+  padding-left: 5px;
+  height: 40px;
+  width: 40px;
+}
+
+#sql {
+  display: inline-block;
+  padding-left: 5px;
+  height: 40px;
+  width: 80px;
+}
+
+.on-click {
+  display: inline-block;
+  float: right;
+  height: 20px;
+}
+
+.certificates {
+  text-decoration: underline;
+  color: black;
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+  .main {
+    margin-right: 20px;
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  .side {
+    clear: right;
+    float: left;
+    width: 80%;
+  }
+
+  .btn {
+    margin: auto;
+    float: none;
+  }
+  .title {
+    margin: auto;
+  }
+  h1 {
+    padding-left: 50px;
+}
