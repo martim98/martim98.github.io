@@ -80,3 +80,7 @@ a:hover {
   margin: auto;
   text-align: center;
 }
+
+.text li {
+    list-style: none;
+}
