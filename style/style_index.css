@@ -1,69 +1,66 @@
+:root {
+  --primary-color: #1a73e8;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --border-color: #e0e0e0;
+  --font-family: 'Roboto', sans-serif;
+}
+
 * {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: var(--font-family);
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
-  margin-bottom: auto;
-  margin-top: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: #f2f2f2;
+  margin: 0;
+  padding: 0 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .top-bar {
-  height: 20px;
-  margin: auto;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  background:  #0047b3;
-}
-
-.top-bar h4 {
-  margin-top: -2px;
-  margin-left: 10px;
-  color: white;
-  text-shadow: 5px;
-  -webkit-text-stroke-width: 0.2px;
-  -webkit-text-stroke-color: black;
-}
-
-.navbar {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.navbar li {
-  display: inline-block;
-  width: 32%;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px;
   text-align: center;
 }
 
+.top-bar h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.navbar {
+  width: 100%;
+  margin: 20px auto;
+}
+
 .navbar nav {
-  margin-top: auto;
-  margin-left: auto;
-  margin: auto;
-  margin-bottom: 20px;
-  width: 100x;
-  background: white;
-  height: 20%;
-  border: 2px solid black;
-  border-bottom-left-radius:  5px;
-  border-bottom-right-radius:  5px;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.navbar li {
+  list-style: none;
+  margin: 0 15px;
 }
 
 .navbar a{
-  font-size: 25px;
-  color: black;
-  font-weight: 900;
-  text-decoration: none;
-
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 700;
 }
 
 a:hover {
-  color: #0047b3;
-
+  color: var(--primary-color);
 }
 
 .title {
@@ -90,18 +87,18 @@ a:hover {
 
 
 h1 {
-  padding-left: 130px;
   text-align: center;
+  margin: 0 0 20px;
 }
 
 .main {
   float: left;
-  background: white;
+  background: #fff;
   width: 60%;
-  padding-left: 20px;
-  padding-right: 60px;
-  border: 2px dashed black;
-  border-radius: 3px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .main.curriculum {
@@ -113,9 +110,7 @@ h1 {
   border-bottom: 2px solid red;
 }
 
-.main ul {
-  background
-}
+
 
 .main h2 {
   padding-left: 20px;
@@ -132,10 +127,11 @@ h1 {
 .side {
   float: right;
   width: 30%;
-  background: white;
-  border: 2px dashed black;
-  border-radius: 3px;
-  padding-right: 5px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .side h2{
@@ -174,35 +170,37 @@ h1 {
 }
 
 .btn {
-  display: inline;
+  display: inline-block;
   float: right;
-  padding: 10px;
+  padding: 10px 20px;
   margin-top: 20px;
   margin-bottom: 10px;
-  background: #cce6ff;;
-  border: 1px solid black;
-  border-radius: 3px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .btn a{
-  text-decoration: underline;
-  color: black;
-  font-weight: 900;
+  color: inherit;
+  text-decoration: none;
 }
 
-.btn a:hover {
-  color: #0047b3;
+.btn:hover {
+  background: #1558b0;
 }
 
 .contacts li{
-  color: black;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 .contacts a{
-  color: black;
-  font-weight: 900;
-  text-decoration: underline;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
 }
 
 img {
@@ -227,27 +225,23 @@ img {
 
 .certificates {
   text-decoration: underline;
-  color: black;
+  color: var(--primary-color);
 }
 
 
 
 @media screen and (max-width: 992px) {
 
-  .main {
-    margin-right: 20px;
-    width: 80%;
-    margin-bottom: 30px;
-  }
+  .main,
   .side {
-    clear: right;
-    float: left;
-    width: 80%;
+    width: 100%;
+    float: none;
+    margin: 0 0 20px;
   }
-
   .title {
     margin: auto;
   }
   h1 {
-    padding-left: 50px;
+    padding-left: 0;
+  }
 }
