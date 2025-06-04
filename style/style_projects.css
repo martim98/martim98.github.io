@@ -1,109 +1,114 @@
+:root {
+  --primary-color: #1a73e8;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --border-color: #e0e0e0;
+  --font-family: 'Roboto', sans-serif;
+}
+
 * {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: var(--font-family);
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
-  margin-bottom: auto;
-  margin-top: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: #f2f2f2;
+  margin: 0;
+  padding: 0 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .top-bar {
-  height: 20px;
-  margin: auto;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  background: #0047b3;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
 .top-bar h4 {
-  margin-top: -2px;
-  margin-left: 10px;
-  color: white;
-  text-shadow: 5px;
-  -webkit-text-stroke-width: 0.2px;
-  -webkit-text-stroke-color: black;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .navbar {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.navbar li {
-  display: inline-block;
-  width: 32%;
-  text-align: center;
+  margin: 20px auto;
 }
 
 .navbar nav {
-  margin-top: auto;
-  margin-left: auto;
-  margin: auto;
-  margin-bottom: 20px;
-  width: 100x;
-  background: white;
-  height: 20%;
-  border: 2px solid black;
-  border-bottom-left-radius:  5px;
-  border-bottom-right-radius:  5px;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.navbar li {
+  list-style: none;
+  margin: 0 15px;
 }
 
 .navbar a{
-  font-size: 25px;
-  color: black;
-  font-weight: 900;
-  text-decoration: none;
-
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 700;
 }
 
-a:hover {
-  color: #0047b3;
-
+.navbar a:hover {
+  color: var(--primary-color);
 }
 
 .project{
   float: left;
   width: 80%;
-
 }
 
 .download-window {
   float: right;
-  width: 10%;
+  width: 15%;
 }
 
 .project-window {
-  border-top: 2px dashed black;
-  padding-top: 5px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+  margin-top: 20px;
 }
+
 
 .btn {
   margin-top: 10px;
-  width: 100px;
-  height: 60px;
-  background-color: white;
-  font-weight: 900;
-  border: 1px solid black;
-  border-radius: 5px;
-  font-size: 18px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .btn:hover {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2);
-  color: #80bfff;
+  background: #1558b0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .btn:focus {
+  outline: none;
 }
 
 
 @media screen and (max-width: 800px) {
-  .btn {
-    width: 50px;
-    height: 50px;
+  .project,
+  .download-window {
+    width: 100%;
+    float: none;
+    text-align: center;
   }
+  .btn {
+    width: auto;
+  }
+}
