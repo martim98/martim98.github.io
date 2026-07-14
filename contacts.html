@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type = 'text/css' href="style/style_contacts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Martim Almeida, Biostatistician based in Lisbon.">
+    <title>Martim Almeida | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style_contacts.css">
   </head>
   <body>
-    <div class="top-bar">
-      <h4>Martim Almeida webPage</h4>
-    </div>
-    <div class="navbar">
-      <nav>
-        <ul>
-          <li class = 'navbar left'><a href = 'index.html'>Curriculum</a></li>
-          <li class = 'navbar right'><a href = 'projects.html'>Projects</a></li>
-          <li class = "navbar right"><a href = 'contacts.html'>Contacts</a></li>
-        </ul>
+    <header class="site-header">
+      <a class="brand" href="index.html">MA<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Curriculum</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="contacts.html">Contact</a>
       </nav>
-    </div>
-    <div class="main-container">
-      <div class="text">
-      <h2>Martim Almeida</h2>
-      <ul>
-        <li>Email: martim.ferreira.almeida@gmail.com</li>
-        <li><a href="https://www.linkedin.com/in/martim-almeida-683135100/">Linkedin</a></li>
-        <li><a href="https://github.com/martim98">Github</a></li>
-      </ul>
-      </div>
-    </div>
+    </header>
+    <main>
+      <section class="contact-intro">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h1>Let’s talk about<br><em>data and impact.</em></h1>
+        <p>For opportunities, collaborations, or a conversation about biostatistics and health data, please reach out.</p>
+      </section>
+      <section class="contact-grid">
+        <div class="contact-card">
+          <p class="card-label">DIRECT CONTACT</p>
+          <a class="email" href="mailto:martim.ferreira.almeida@gmail.com">martim.ferreira.almeida@gmail.com</a>
+          <p class="location">Lisbon, Portugal</p>
+        </div>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/martim-almeida-683135100/" target="_blank" rel="noopener"><span>LinkedIn</span><b>↗</b></a>
+          <a href="https://github.com/martim98" target="_blank" rel="noopener"><span>GitHub</span><b>↗</b></a>
+        </div>
+      </section>
+    </main>
+    <footer><span>© Martim Almeida</span><span>Biostatistics · Data · Research</span></footer>
+  </body>
+</html>

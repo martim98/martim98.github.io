@@ -1,51 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type = 'text/css' href="style/style_projects.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Selected biostatistics and data projects by Martim Almeida.">
+    <title>Martim Almeida | Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style_projects.css">
   </head>
   <body>
-    <div class="top-bar">
-      <h4>Martim Almeida webPage</h2>
-    </div>
-    <div class="navbar">
-      <nav>
-        <ul>
-          <li class = 'navbar left'><a href = 'index.html'>Curriculum</a></li>
-          <li class = 'navbar right'><a href = 'projects.html'>Projects</a></li>
-          <li class = "navbar right"><a href = 'contacts.html'>Contacts</a></li>
-        </ul>
+    <header class="site-header">
+      <a class="brand" href="index.html">MA<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Curriculum</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="contacts.html">Contact</a>
       </nav>
-    </div>
-    <div class="main-container">
-        <div class="1st-project-window">
-          <div class="project">
-            <h3>Repository with academical exercices</h3>
-            <p>Github repository containing academical exercices. Topics:</p>
-            <ul>
-              <li>Analysis of Variance</li>
-              <li>Linear models</li>
-              <li>Bayesian statistics</li>
-            </ul>
+    </header>
+    <main>
+      <section class="page-intro">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h1>Projects that make<br><em>data useful.</em></h1>
+        <p>Explorations in biostatistics, clinical research, and practical programming.</p>
+      </section>
+      <section class="project-list" aria-label="Selected projects">
+        <article class="project-card">
+          <div class="project-number">01</div>
+          <div class="project-copy">
+            <p class="project-type">ACADEMIC RESEARCH · GITHUB</p>
+            <h2>Academic biostatistics exercises</h2>
+            <p>A collection of exercises covering analysis of variance, linear models, and Bayesian statistics.</p>
+            <a class="project-link" href="https://github.com/martim98/academical_biostatiscs_rep" target="_blank" rel="noopener">View repository <span>↗</span></a>
           </div>
-          <div class="download-window">
-            <button type="button" name="button" class = "btn"
-            onclick= "window.open('https://github.com/martim98/academical_biostatiscs_rep', '_blank');">Open</button>
+          <div class="project-tag">R / Statistics</div>
+        </article>
+        <article class="project-card">
+          <div class="project-number">02</div>
+          <div class="project-copy">
+            <p class="project-type">CLINICAL TRIALS · SHINY APP</p>
+            <h2>Biostatistics simulator</h2>
+            <p>A Shiny application exploring a simple two-population t-test through an interactive clinical-trials simulator.</p>
+            <a class="project-link" href="https://martim-almeida.shinyapps.io/myapp/" target="_blank" rel="noopener">Open application <span>↗</span></a>
           </div>
-        </div>
-      <div style= "clear: both;"></div>
-      <div class="project-window">
-        <div class="project">
-          <h3>Shiny app - Biostatistics</h3>
-          <p>Work in progress - This is a shiny app developed with shiny R package, with a clinical
-          trials simulator, using a simple two population T test.</p>
-        </div>
-        <div class="download-window">
-          <button type="button" name="button" class = "btn"
-          onclick = 'window.open("https://martim-almeida.shinyapps.io/myapp/", " _ blank");'>
-             Open</button>
-        </div>
-      </div>
-  </div>
+          <div class="project-tag">R Shiny</div>
+        </article>
+      </section>
+    </main>
+    <footer><span>© Martim Almeida</span><span>Biostatistics · Data · Research</span></footer>
+  </body>
+</html>

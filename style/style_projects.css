@@ -1,114 +1,24 @@
-:root {
-  --primary-color: #1a73e8;
-  --text-color: #333;
-  --bg-color: #f9f9f9;
-  --border-color: #e0e0e0;
-  --font-family: 'Roboto', sans-serif;
-}
-
-* {
-  font-family: var(--font-family);
-  text-decoration: none;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0 20px;
-  background: var(--bg-color);
-  color: var(--text-color);
-}
-
-.top-bar {
-  background: var(--primary-color);
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-
-.top-bar h4 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.navbar {
-  width: 100%;
-  margin: 20px auto;
-}
-
-.navbar nav {
-  display: flex;
-  justify-content: center;
-  background: #fff;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 10px;
-}
-
-.navbar li {
-  list-style: none;
-  margin: 0 15px;
-}
-
-.navbar a{
-  font-size: 20px;
-  color: var(--text-color);
-  font-weight: 700;
-}
-
-.navbar a:hover {
-  color: var(--primary-color);
-}
-
-.project{
-  float: left;
-  width: 80%;
-}
-
-.download-window {
-  float: right;
-  width: 15%;
-}
-
-.project-window {
-  border-top: 1px solid var(--border-color);
-  padding-top: 10px;
-  margin-top: 20px;
-}
-
-
-.btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: #1558b0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.btn:focus {
-  outline: none;
-}
-
-
-@media screen and (max-width: 800px) {
-  .project,
-  .download-window {
-    width: 100%;
-    float: none;
-    text-align: center;
-  }
-  .btn {
-    width: auto;
-  }
-}
+:root { --ink:#17211f; --muted:#68736f; --line:#d9e0dc; --paper:#f5f7f3; --accent:#e8754f; --green:#224d43; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:var(--paper); font-family:'DM Sans',sans-serif; }
+a { color:inherit; text-decoration:none; }
+.site-header, main, footer { max-width:1180px; margin:auto; }
+.site-header { display:flex; align-items:center; justify-content:space-between; padding:28px 34px; }
+.brand { font:700 25px 'Space Grotesk',sans-serif; letter-spacing:-.08em; }.brand span { color:var(--accent); }
+nav { display:flex; gap:30px; color:var(--muted); font-size:14px; font-weight:600; }
+nav a { padding-bottom:6px; border-bottom:2px solid transparent; } nav a:hover, nav .active { color:var(--ink); border-color:var(--accent); }
+.page-intro { padding:105px 34px 85px; border-bottom:1px solid var(--line); }
+.eyebrow, .project-type { color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.16em; }
+h1 { margin:20px 0; font:600 clamp(46px,6vw,76px)/.98 'Space Grotesk',sans-serif; letter-spacing:-.065em; } h1 em { color:var(--green); font-style:normal; }
+.page-intro > p:last-child { color:var(--muted); font-size:18px; }
+.project-list { padding:25px 34px 100px; }
+.project-card { display:grid; grid-template-columns:80px 1fr 150px; gap:30px; padding:42px 0; border-bottom:1px solid var(--line); }
+.project-number { color:var(--accent); font:600 17px 'Space Grotesk',sans-serif; }
+.project-type { margin:0 0 18px; font-size:10px; }
+h2 { margin:0 0 13px; font:600 29px 'Space Grotesk',sans-serif; letter-spacing:-.04em; }
+.project-copy > p:not(.project-type) { max-width:570px; margin:0; color:var(--muted); line-height:1.65; }
+.project-link { display:inline-block; margin-top:22px; color:var(--green); border-bottom:1px solid var(--green); padding-bottom:4px; font-size:13px; font-weight:700; }.project-link span { margin-left:14px; }
+.project-tag { align-self:start; justify-self:end; padding:8px 11px; background:#e9eee9; color:var(--green); font-size:11px; font-weight:700; }
+footer { display:flex; justify-content:space-between; padding:25px 34px 35px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+@media (max-width:700px) { .site-header, .page-intro, .project-list { padding-left:22px; padding-right:22px; } .page-intro { padding-top:70px; } .project-card { grid-template-columns:45px 1fr; gap:15px; } .project-tag { grid-column:2; justify-self:start; } footer { margin:0 22px; padding-left:0; padding-right:0; } }
+@media (max-width:500px) { .site-header { align-items:flex-start; } nav { gap:13px; font-size:12px; } footer { display:block; } footer span { display:block; margin-bottom:8px; } }
