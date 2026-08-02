@@ -1,21 +1,33 @@
-:root { --ink:#17211f; --muted:#68736f; --line:#d9e0dc; --paper:#f5f7f3; --accent:#e8754f; --green:#224d43; }
+:root { --blue:#0047b3; --blue-dark:#003987; --ink:#000; --muted:#38404a; --paper:#f2f2f2; --surface:#fff; --soft-blue:#cce6ff; }
 * { box-sizing:border-box; }
-body { margin:0; color:var(--ink); background:var(--paper); font-family:'DM Sans',sans-serif; }
-a { color:inherit; text-decoration:none; }
+body { margin:0; color:var(--ink); background:var(--paper); font-family:"Trebuchet MS",Helvetica,sans-serif; }
+a { color:var(--ink); text-decoration:underline; }
+a:hover { color:var(--blue); }
 .site-header, main, footer { max-width:1180px; margin:auto; }
-.site-header { display:flex; align-items:center; justify-content:space-between; padding:28px 34px; }
-.brand { font:700 25px 'Space Grotesk',sans-serif; letter-spacing:-.08em; }.brand span { color:var(--accent); }
-nav { display:flex; gap:30px; color:var(--muted); font-size:14px; font-weight:600; }
-nav a { padding-bottom:6px; border-bottom:2px solid transparent; } nav a:hover, nav .active { color:var(--ink); border-color:var(--accent); }
-.contact-intro { padding:105px 34px 80px; border-bottom:1px solid var(--line); }
-.eyebrow, .card-label { color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.16em; }
-h1 { margin:20px 0; font:600 clamp(46px,6vw,76px)/.98 'Space Grotesk',sans-serif; letter-spacing:-.065em; } h1 em { color:var(--green); font-style:normal; }
-.contact-intro > p:last-child { max-width:470px; color:var(--muted); font-size:18px; line-height:1.6; }
-.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:100px; padding:70px 34px 150px; }
-.contact-card { background:#e9eee9; padding:32px; }.card-label { margin:0 0 28px; font-size:10px; }
-.email { display:inline-block; color:var(--green); font:600 clamp(20px,3vw,30px) 'Space Grotesk',sans-serif; letter-spacing:-.04em; border-bottom:1px solid var(--green); padding-bottom:8px; }.email:hover { color:var(--accent); border-color:var(--accent); }
-.location { margin:22px 0 0; color:var(--muted); font-size:14px; }
-.contact-links { border-top:1px solid var(--line); }.contact-links a { display:flex; justify-content:space-between; padding:22px 0; border-bottom:1px solid var(--line); font:600 22px 'Space Grotesk',sans-serif; }.contact-links a:hover { color:var(--accent); }.contact-links b { font:400 22px 'DM Sans',sans-serif; }
-footer { display:flex; justify-content:space-between; padding:25px 34px 35px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
-@media (max-width:700px) { .site-header, .contact-intro, .contact-grid { padding-left:22px; padding-right:22px; } .contact-intro { padding-top:70px; } .contact-grid { display:block; padding-top:50px; padding-bottom:100px; } .contact-links { margin-top:45px; } footer { margin:0 22px; padding-left:0; padding-right:0; } }
-@media (max-width:500px) { .site-header { align-items:flex-start; } nav { gap:13px; font-size:12px; } footer { display:block; } footer span { display:block; margin-bottom:8px; } }
+.site-header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:12px 20px; background:var(--blue); border:2px solid var(--ink); }
+.brand { color:#fff; font:900 25px "Trebuchet MS",Helvetica,sans-serif; text-decoration:none; }
+.brand span { color:#fff; }
+nav { display:flex; gap:0; background:var(--surface); border:2px solid var(--ink); }
+nav a { padding:8px 16px; color:var(--ink); font-size:14px; font-weight:900; text-decoration:none; border-right:1px solid var(--ink); }
+nav a:last-child { border-right:0; }
+nav a:hover, nav .active { color:var(--blue); background:var(--soft-blue); }
+.contact-intro { margin-top:20px; padding:38px 30px; background:var(--surface); border:2px solid var(--ink); }
+.eyebrow, .card-label { color:var(--blue); font-size:12px; font-weight:900; letter-spacing:.08em; text-decoration:underline; }
+h1 { margin:16px 0 18px; font:900 clamp(40px,5vw,64px)/1.05 "Trebuchet MS",Helvetica,sans-serif; }
+h1 em { color:var(--blue); font-style:normal; }
+.contact-intro > p:last-child { max-width:600px; color:var(--muted); font-size:17px; line-height:1.5; }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:22px 0 80px; }
+.contact-card, .contact-links { background:var(--surface); border:2px dashed var(--ink); }
+.contact-card { padding:28px; }
+.card-label { margin:0 0 24px; font-size:11px; }
+.email { display:inline-block; color:var(--blue); font-size:clamp(19px,3vw,28px); font-weight:900; letter-spacing:-.02em; }
+.email:hover { color:var(--blue-dark); }
+.location { margin:20px 0 0; color:var(--muted); font-size:14px; }
+.contact-links { padding:0 24px; }
+.contact-links a { display:flex; justify-content:space-between; padding:21px 0; border-bottom:1px solid var(--ink); font-size:21px; font-weight:900; text-decoration:none; }
+.contact-links a:last-child { border-bottom:0; }
+.contact-links a:hover { color:var(--blue); }
+.contact-links b { font-weight:400; }
+footer { display:flex; justify-content:space-between; padding:18px 20px 26px; border-top:2px solid var(--ink); color:var(--muted); font-size:12px; }
+@media (max-width:700px) { .site-header, .contact-intro, .contact-grid { padding-left:18px; padding-right:18px; } .contact-intro { padding-top:32px; } .contact-grid { display:block; padding-top:18px; } .contact-links { margin-top:18px; } footer { margin:0 18px; padding-left:0; padding-right:0; } }
+@media (max-width:500px) { nav a { padding:7px 9px; font-size:12px; } footer { display:block; } footer span { display:block; margin-bottom:7px; } }
